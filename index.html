@@ -9,43 +9,43 @@
   </head>
   <body>
     <h1>cricket Team</h1>
-    <label for="PlayerName">Player Name</label>
-    <input
-      type="text"
-      id="name"
-      name="PlayerName"
-      placeholder="name"
-      value=""
-    />
-    <label for="PlayerAge">Age</label>
-    <input type="number" id="age" name="PlayerAge" placeholder="0" value="" />
-    <label for="player">Choose Player:</label>
-    <select name="player" id="player">
-      <option value="Batsman">Batsman</option>
-      <option value="Bowler">Bowler</option>
-      <option value="AllRounder">All Rounder</option>
-    </select>
-    <button type="submit" id="add">Add Player</button>
+    <div id="display">
+      <label for="PlayerName" style="background-color: aqua">Player Name</label>
+      <input
+        type="text"
+        id="name"
+        name="PlayerName"
+        placeholder="name"
+        onkeypress="(event.charCode > 64 && 
+	event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"
+        value=""
+      /><br /><br />
+      <label for="PlayerAge" style="background-color: aqua">Age</label>
+      <button id="mins">-</button>
+      <input
+        type="number"
+        id="age"
+        name="PlayerAge"
+        placeholder="0"
+        value="0"
+      />
+      <button id="plus">+</button>
+      <br /><br />
 
-    <table border="1" id="list">
-      <tr>
-        <th>sr.no</th>
-        <th>Player Name</th>
-        <th>Player Age</th>
-        <th>Player Type</th>
-      </tr>
-      <!-- <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li>
-      <li>Player</li> -->
-    </table>
+      <input type="checkbox" onclick="checkbox()" id="opt1" class="c-box" />
+      <span id="msg">Bowler</span>
+      <input type="checkbox" onclick="checkboxx()" id="opt2" class="c-box" />
+      <span id="msg">Batsman</span>
+
+      <br /><br />
+      <button type="submit" id="add">Add Player</button>
+    </div>
+    <table border="1" id="list"></table>
     <script src="index.js"></script>
   </body>
 </html>
+
+
+
+
+
